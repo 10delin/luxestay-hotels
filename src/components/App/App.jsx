@@ -1,13 +1,5 @@
-import { useGetHotelQuery } from "../../redux/features/hotelsApi";
+import { AppRoutes } from "../../routes";
 
 export const App = () => {
-  const { data: hotel } = useGetHotelQuery();
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>TEST</p>
-      </header>
-    </div>
-  );
+  return <AppRoutes />;
 };
