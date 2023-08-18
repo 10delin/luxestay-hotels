@@ -27,7 +27,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    display: flex;
+    display: block;
     place-content: center;
   }
 
@@ -41,7 +41,7 @@ export const GlobalStyles = createGlobalStyle`
     border: 1px solid transparent;
     padding: 0.5em 1.2em;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 400;
     font-family: inherit;
     background-color: #019592;
     color: #ffffff;

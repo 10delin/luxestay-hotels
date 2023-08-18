@@ -1,14 +1,18 @@
 import PropTypes from "prop-types";
 import { Board } from "../Board/Board";
+import { StyledContainer, StyledContentTitle, StyledTitle } from "./RoomStyles";
 
 export const Room = ({ room }) => {
   return (
-    <div>
-      <h2>{room.name}</h2>
+    <StyledContainer>
+      <StyledContentTitle>
+        <StyledTitle>{room.name}</StyledTitle>
+      </StyledContentTitle>
+
       {room.boards.map((board, index) => (
         <Board key={index} board={board} />
       ))}
-    </div>
+    </StyledContainer>
   );
 };
 
