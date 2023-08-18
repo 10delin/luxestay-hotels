@@ -10,7 +10,7 @@ export const AppRoutes = () => {
     <>
       <Routes navigate={(to) => navigate(to)}>
         <Route path="/" element={<Home />} />
-        <Route path="/reservation/:id" element={<Reservation />} />
+        <Route path="/reservation" element={<Reservation />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </>

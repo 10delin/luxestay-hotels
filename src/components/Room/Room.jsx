@@ -9,8 +9,8 @@ export const Room = ({ room }) => {
         <StyledTitle>{room.name}</StyledTitle>
       </StyledContentTitle>
 
-      {room.boards.map((board, index) => (
-        <Board key={index} board={board} />
+      {room?.boards.map((board, index) => (
+        <Board key={index} board={board} roomName={room.name} />
       ))}
     </StyledContainer>
   );
