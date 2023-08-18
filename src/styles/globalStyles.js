@@ -44,6 +44,7 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: 500;
     font-family: inherit;
     background-color: #019592;
+    color: #ffffff;
     cursor: pointer;
     transition: border-color 0.25s;
   }
