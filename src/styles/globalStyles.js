@@ -37,19 +37,20 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   button {
-    border-radius: 8px;
+    border-radius: 5px;
     border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
+    padding: 0.5em 1.2em;
+    font-size: 15px;
     font-weight: 500;
     font-family: inherit;
     background-color: #019592;
     color: #ffffff;
     cursor: pointer;
+    text-transform: uppercase;
     transition: border-color 0.25s;
   }
   button:hover {
-    border-color: #006260;
+    background-color: #006260;
   }
   button:focus,
   button:focus-visible {

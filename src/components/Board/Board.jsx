@@ -1,12 +1,13 @@
 import PropTypes from "prop-types";
+import { StyledContainer, StyledName, StyledPrice } from "./BoardStyles";
 
 export const Board = ({ board }) => {
   return (
-    <div>
-      <p>{board.name}</p>
-      <p>{board.price}</p>
+    <StyledContainer>
+      <StyledName>{board.name}</StyledName>
+      <StyledPrice>{`$${board.price}`}</StyledPrice>
       <button>Reservar</button>
-    </div>
+    </StyledContainer>
   );
 };
 
