@@ -5,10 +5,10 @@ export const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 800px;
   border: 1px solid #c5c5c5;
   margin-bottom: 20px;
   width: 100%;
+
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 `;
 
