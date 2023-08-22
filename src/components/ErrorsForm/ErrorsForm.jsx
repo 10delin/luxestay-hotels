@@ -1,16 +1,16 @@
 import PropTypes from "prop-types";
+import { StyledContainer } from "./ErrorsFormStyles";
 
 export const ErrorsForm = ({ errors }) => {
   return (
     Object.keys(errors).length > 0 && (
-      <div className="error-message">
-        Please fix the following errors:
+      <StyledContainer className="error-message">
         <ul>
           {Object.keys(errors).map((fieldName) => (
             <li key={fieldName}>{errors[fieldName]}</li>
           ))}
         </ul>
-      </div>
+      </StyledContainer>
     )
   );
 };

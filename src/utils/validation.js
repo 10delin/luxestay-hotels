@@ -2,25 +2,25 @@ export const validateReservationForm = (values) => {
   const errors = {};
 
   if (!values.name) {
-    errors.name = "Name is required";
+    errors.name = "Nombre obligatorio";
   }
 
   if (!values.surname) {
-    errors.surname = "Surname is required";
+    errors.surname = "Apellido obligatorio";
   }
 
   if (!values.email) {
-    errors.email = "Email is required";
+    errors.email = "Email obligatorio";
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-    errors.email = "Invalid email address";
+    errors.email = "Email no válido";
   }
 
   if (!values.country) {
-    errors.country = "Country is required";
+    errors.country = "País obligatorio";
   }
 
   if (!values.terms) {
-    errors.terms = "You must accept the terms and conditions";
+    errors.terms = "Debes aceptar los términos y condiciones";
   }
 
   return errors;
