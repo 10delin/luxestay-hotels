@@ -64,4 +64,29 @@ export const StyledFormikField = styled.div`
     color: #212121;
   `}
   }
+
+  select {
+    position: relative;
+    width: 95%;
+    padding-left: 15px;
+    font-family: inherit;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 15px;
+    background: #ededed;
+    color: #212121;
+    cursor: pointer;
+
+    ${({ $name }) =>
+      $name === "terms" &&
+      `
+      position: flex;
+      width: initial;
+
+      
+    color: #212121;
+  `}
+  }
 `;

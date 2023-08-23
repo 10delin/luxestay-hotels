@@ -3,8 +3,5 @@ export const COUNTRIES = [
   "Francia",
   "Alemania",
   "Italia",
-  "Portugal",
   "Reino Unido",
-  "Estados Unidos",
-  "China",
 ];

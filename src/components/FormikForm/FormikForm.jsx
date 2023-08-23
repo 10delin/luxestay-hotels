@@ -52,7 +52,7 @@ export const FormikForm = ({ room }) => {
           />
           <FormikField
             name="country"
-            type="text"
+            type="select"
             label="Pais"
             dataCy="country-input"
           />
