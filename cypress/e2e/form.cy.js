@@ -33,7 +33,6 @@ describe("Form Page", () => {
     cy.getBySel("name-input").type("test");
     cy.getBySel("surname-input").type("test");
     cy.getBySel("email-input").type("test@gmail.com");
-    cy.getBySel("country-input").type("test");
     cy.getBySel("terms-input").click();
     cy.getBySel("goToReservation-button").click();
   });
