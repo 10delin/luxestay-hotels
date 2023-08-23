@@ -26,7 +26,6 @@ export const Bookings = () => {
             room={room}
             form={room}
             bookings={true}
-            data-cy="booking-item"
           />
         ))
       )}
