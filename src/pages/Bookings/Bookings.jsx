@@ -12,10 +12,12 @@ export const Bookings = () => {
   return (
     <StyledContainer>
       <h1>Reservas</h1>
-      <button onClick={() => navigate("/")}>Volver al Inicio</button>
+      <button onClick={() => navigate("/")} data-cy="goToHome-button">
+        Volver al Inicio
+      </button>
 
       {!localRoom ? (
-        <p>No hay reservas</p>
+        <p data-cy="no-bookings">No hay reservas</p>
       ) : (
         localRoom.map((room) => (
           <Booking
@@ -24,6 +26,7 @@ export const Bookings = () => {
             room={room}
             form={room}
             bookings={true}
+            data-cy="booking-item"
           />
         ))
       )}

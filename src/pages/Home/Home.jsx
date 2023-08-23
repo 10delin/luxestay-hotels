@@ -4,7 +4,7 @@ import { InputDate } from "../../components/InputDate/InputDate";
 import { Room } from "../../components/Room/Room";
 import { useGetHotelQuery } from "../../redux/features/hotelsApi";
 
-import { StyledContainer, StyledButton } from "./HomeStyles";
+import { StyledContainer, StyledButton, StyledRooms } from "./HomeStyles";
 
 export const Home = () => {
   const { data } = useGetHotelQuery();
@@ -12,13 +12,18 @@ export const Home = () => {
 
   return (
     <StyledContainer>
-      <StyledButton onClick={() => navigate("/bookings")}>
+      <StyledButton
+        onClick={() => navigate("/bookings")}
+        data-cy="goToBookings-button"
+      >
         Reservas
       </StyledButton>
       <InputDate />
-      {data?.rooms.map((room) => (
-        <Room key={room.id} room={room} />
-      ))}
+      <StyledRooms data-cy="rooms-content">
+        {data?.rooms.map((room) => (
+          <Room key={room.id} room={room} />
+        ))}
+      </StyledRooms>
     </StyledContainer>
   );
 };

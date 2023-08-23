@@ -30,17 +30,47 @@ export const FormikForm = ({ room }) => {
       validate={validateReservationForm}
       onSubmit={handleSubmit}
     >
-      {({ errors, initialValues }) => (
+      {({ errors }) => (
         <StyledFormikForm>
-          {Object.keys(initialValues).map((fieldName) => (
-            <FormikField key={fieldName} name={fieldName} />
-          ))}
+          <FormikField
+            name="name"
+            type="text"
+            label="Nombre"
+            dataCy="name-input"
+          />
+          <FormikField
+            name="surname"
+            type="text"
+            label="Apellidos"
+            dataCy="surname-input"
+          />
+          <FormikField
+            name="email"
+            type="text"
+            label="Email"
+            dataCy="email-input"
+          />
+          <FormikField
+            name="country"
+            type="text"
+            label="Pais"
+            dataCy="country-input"
+          />
+          <FormikField
+            name="terms"
+            type="checkbox"
+            label="Acepto terminos y condiciones"
+            dataCy="terms-input"
+          />
+
           <StyledTotal>
             <p>Total</p>
             <StyledPrice>{`$${room.price}`}</StyledPrice>
           </StyledTotal>
           <ErrorsForm errors={errors} />
-          <button type="submit">Reservar</button>
+          <button type="submit" data-cy="goToReservation-button">
+            Reservar
+          </button>
         </StyledFormikForm>
       )}
     </Formik>

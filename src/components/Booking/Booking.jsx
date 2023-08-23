@@ -18,7 +18,7 @@ import {
 
 export const Booking = ({ room, form, aleatoryNumber, counter, bookings }) => {
   return (
-    <StyledContainer $bookings={bookings}>
+    <StyledContainer $bookings={bookings} data-cy="booking-item">
       {!bookings ? (
         <StyledMain>
           <h2>Redirigiendo a la página principal en {counter} segundos...</h2>

@@ -32,7 +32,9 @@ export const Board = ({ board, roomName }) => {
       <StyledContent>
         <StyledName>{board.name}</StyledName>
         <StyledPrice>{`$${board.price}`}</StyledPrice>
-        <StyledButton onClick={handleState}>Reservar</StyledButton>
+        <StyledButton onClick={handleState} data-cy="goToForm-button">
+          Reservar
+        </StyledButton>
       </StyledContent>
     </StyledContainer>
   );

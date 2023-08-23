@@ -4,34 +4,18 @@ import { Field } from "formik";
 
 import { StyledFormikField } from "./FormikFieldStyles";
 
-export const FormikField = ({ name }) => {
-  const types = (name) => {
-    switch (name) {
-      case "name":
-        return "text";
-      case "surname":
-        return "text";
-      case "email":
-        return "email";
-      case "country":
-        return "text";
-      case "terms":
-        return "checkbox";
-      default:
-        return "text";
-    }
-  };
-
+export const FormikField = ({ name, type, label, dataCy }) => {
   return (
     <StyledFormikField $name={name}>
-      <Field id={name} name={name} type={types(name)} />
-      <label htmlFor={name}>
-        {name === "terms" ? "Acepto terminos y condiciones" : name}
-      </label>
+      <Field id={name} name={name} type={type} data-cy={dataCy} />
+      <label htmlFor={name}>{label}</label>
     </StyledFormikField>
   );
 };
 
 FormikField.propTypes = {
   name: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  dataCy: PropTypes.string.isRequired,
 };

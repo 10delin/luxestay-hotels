@@ -7,7 +7,7 @@ import { StyledContainer, StyledContentTitle, StyledTitle } from "./RoomStyles";
 
 export const Room = ({ room, selected }) => {
   return (
-    <StyledContainer>
+    <StyledContainer data-cy="room-item">
       <StyledContentTitle>
         <StyledTitle>{room.name || room.roomName}</StyledTitle>
       </StyledContentTitle>

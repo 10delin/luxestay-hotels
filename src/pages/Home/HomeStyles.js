@@ -5,7 +5,6 @@ export const StyledContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: calc(5rem + 2vw);
-  height: 100vh;
   margin: 0 auto;
   max-width: 800px;
 
@@ -16,6 +15,14 @@ export const StyledContainer = styled.div`
   @media (max-width: 500px) {
     padding: 10px;
   }
+`;
+
+export const StyledRooms = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
 `;
 
 export const StyledButton = styled.button`
