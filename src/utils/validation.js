@@ -15,10 +15,6 @@ export const validateReservationForm = (values) => {
     errors.email = "Email no válido";
   }
 
-  if (!values.country) {
-    errors.country = "País obligatorio";
-  }
-
   if (!values.terms) {
     errors.terms = "Debes aceptar los términos y condiciones";
   }
