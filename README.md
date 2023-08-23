@@ -16,7 +16,7 @@ Visita la [página web desplegada en Vercel](https://luxestay-hotels.vercel.app/
 - Formularios manejados eficazmente con [Formik](https://formik.org/).
 - Datos obtenidos desde [esta URL](https://raw.githubusercontent.com/10delin/luxestay-hotels.json/main/roomsApi.json) en GitHub.
 - Pruebas implementadas con [Cypress](https://www.cypress.io/) para garantizar la calidad.
-- Se añaden algunas pruebas unitarias con Vitest para garantizar la calidad.
+- Se añaden algunas pruebas unitarias con [Vitest](https://vitest.dev/) para garantizar la calidad.
 - Automatización de pruebas, análisis lint y formato de commits con [Husky](https://typicode.github.io/husky/#/).
 - Estilos limpios y legibles creados con [Styled Components](https://styled-components.com/).
 
