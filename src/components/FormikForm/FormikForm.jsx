@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { Formik } from "formik";
 import { ErrorsForm } from "../ErrorsForm/ErrorsForm";
 import { FormikField } from "../FormikField/FormikField";
@@ -5,7 +7,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setForm } from "../../redux/reducers/formSlice";
 import { validateReservationForm } from "../../utils/validation";
-import PropTypes from "prop-types";
+
 import { StyledFormikForm, StyledPrice, StyledTotal } from "./FormikFormStyles";
 
 export const FormikForm = ({ room }) => {

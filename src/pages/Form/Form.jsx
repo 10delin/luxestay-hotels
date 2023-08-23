@@ -1,9 +1,11 @@
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 import { useSelector } from "react-redux";
 import { FormikForm } from "../../components/FormikForm/FormikForm";
 import { Room } from "../../components/Room/Room";
+
 import { StyledContainer } from "./FormStyles";
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 
 export const Form = () => {
   const room = useSelector((state) => state.actualRoom);

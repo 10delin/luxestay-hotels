@@ -1,7 +1,9 @@
 import PropTypes from "prop-types";
+
 import { Board } from "../Board/Board";
-import { StyledContainer, StyledContentTitle, StyledTitle } from "./RoomStyles";
 import { RoomSelected } from "../RoomSelected/RoomSelected";
+
+import { StyledContainer, StyledContentTitle, StyledTitle } from "./RoomStyles";
 
 export const Room = ({ room, selected }) => {
   return (

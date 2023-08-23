@@ -1,4 +1,9 @@
 import PropTypes from "prop-types";
+
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setRoom } from "../../redux/reducers/roomSlice";
+
 import {
   StyledContainer,
   StyledContent,
@@ -6,9 +11,6 @@ import {
   StyledPrice,
   StyledButton,
 } from "./BoardStyles";
-import { useDispatch } from "react-redux";
-import { setRoom } from "../../redux/reducers/roomSlice";
-import { useNavigate } from "react-router-dom";
 
 export const Board = ({ board, roomName }) => {
   const dispatch = useDispatch();

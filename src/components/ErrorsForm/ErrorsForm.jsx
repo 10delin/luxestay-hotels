@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+
 import { StyledContainer } from "./ErrorsFormStyles";
 
 export const ErrorsForm = ({ errors }) => {

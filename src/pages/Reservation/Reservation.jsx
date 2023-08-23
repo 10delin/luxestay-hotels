@@ -1,12 +1,14 @@
-import { useSelector } from "react-redux";
-import { StyledContainer } from "./ReservationStyles";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+import { useSelector } from "react-redux";
 import {
   getLocalStorageItem,
   setLocalStorageItem,
 } from "../../utils/localStorageData";
 import { Booking } from "../../components/Booking/Booking";
+
+import { StyledContainer } from "./ReservationStyles";
 
 export const Reservation = () => {
   const room = useSelector((state) => state.actualRoom);

@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
+
 import { getLocalStorageItem } from "../../utils/localStorageData";
 import { Booking } from "../../components/Booking/Booking";
+
 import { StyledContainer } from "./BookingsStyles";
 
 export const Bookings = () => {

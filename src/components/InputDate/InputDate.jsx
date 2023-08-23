@@ -1,9 +1,11 @@
+import { useEffect } from "react";
+
 import { useDispatch } from "react-redux";
 import { useGetHotelQuery } from "../../redux/features/hotelsApi";
-import { StyledContainer } from "./InputDateStyles";
 import { setRoom } from "../../redux/reducers/roomSlice";
-import { useEffect } from "react";
 import { Spinner } from "../Spinner/Spinner";
+
+import { StyledContainer } from "./InputDateStyles";
 
 export const InputDate = () => {
   const { data, isLoading } = useGetHotelQuery();

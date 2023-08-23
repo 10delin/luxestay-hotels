@@ -1,5 +1,7 @@
-import { Field } from "formik";
 import PropTypes from "prop-types";
+
+import { Field } from "formik";
+
 import { StyledFormikField } from "./FormikFieldStyles";
 
 export const FormikField = ({ name }) => {

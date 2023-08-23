@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
+
 import checkImage from "../../assets/images/check.png";
+
 import {
   StyledContainer,
   StyledMain,
