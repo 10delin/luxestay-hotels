@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   padding: calc(5rem + 2vw);
-  height: 100vh;
+  height: 120vh;
   margin: 0 auto;
   max-width: 800px;
 
@@ -16,15 +16,13 @@ export const StyledContainer = styled.div`
   @media (max-width: 500px) {
     padding: 10px;
   }
-`;
 
-export const StyledButton = styled.button`
-  background-color: #eb9502;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
+  h1 {
+    margin-bottom: 2rem;
+    font-size: calc(1.5rem + 1vw);
+  }
 
-  &:hover {
-    background-color: #c27b02;
+  h4 {
+    text-transform: uppercase;
   }
 `;

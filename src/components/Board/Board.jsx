@@ -17,12 +17,12 @@ export const Board = ({ board, roomName }) => {
   const handleState = () => {
     dispatch(
       setRoom({
-        name: roomName,
+        roomName: roomName,
         board: board.name,
         price: board.price,
       })
     );
-    navigate("/reservation");
+    navigate("/form");
   };
 
   return (

@@ -1,28 +1,52 @@
 import { useSelector } from "react-redux";
-import { FormikForm } from "../../components/FormikForm/FormikForm";
-import { Room } from "../../components/Room/Room";
 import { StyledContainer } from "./ReservationStyles";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {
+  getLocalStorageItem,
+  setLocalStorageItem,
+} from "../../utils/localStorageData";
+import { Booking } from "../../components/Booking/Booking";
 
 export const Reservation = () => {
   const room = useSelector((state) => state.actualRoom);
+  const form = useSelector((state) => state.actualForm);
+
+  const [aleatoryNumber] = useState(Math.floor(Math.random() * 1000000));
+  const [counter, setCounter] = useState(5);
+
   const navigate = useNavigate();
+  const localRoom = getLocalStorageItem("bookings") || [];
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-    if (!room.name) {
+    setLocalStorageItem("bookings", [
+      { id: aleatoryNumber, ...room, ...form },
+      ...localRoom,
+    ]);
+
+    const timer = setInterval(() => {
+      setCounter((prevCounter) => prevCounter - 1);
+    }, 1000);
+
+    setTimeout(() => {
+      clearInterval(timer);
       navigate("/");
-    }
+    }, 5000);
+
+    return () => {
+      clearInterval(timer);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [room, form]);
 
   return (
     <StyledContainer>
-      <h1>Resumen de tu reserva</h1>
-      <Room room={room} selected />
-      <h4>Tus datos</h4>
-      <FormikForm room={room} />
+      <Booking
+        room={room}
+        form={form}
+        aleatoryNumber={aleatoryNumber}
+        counter={counter}
+      />
     </StyledContainer>
   );
 };

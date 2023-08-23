@@ -7,7 +7,7 @@ export const Room = ({ room, selected }) => {
   return (
     <StyledContainer>
       <StyledContentTitle>
-        <StyledTitle>{room.name}</StyledTitle>
+        <StyledTitle>{room.name || room.roomName}</StyledTitle>
       </StyledContentTitle>
       {selected ? (
         <RoomSelected room={room} />
@@ -22,7 +22,8 @@ export const Room = ({ room, selected }) => {
 
 Room.propTypes = {
   room: PropTypes.shape({
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string,
+    roomName: PropTypes.string,
     boards: PropTypes.arrayOf(
       PropTypes.shape({
         name: PropTypes.string.isRequired,

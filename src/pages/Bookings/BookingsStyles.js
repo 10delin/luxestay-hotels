@@ -1,10 +1,14 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 
 export const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 10px 20px;
+  margin: 10px;
+  max-width: 800px;
   margin: 0 auto;
   padding: calc(5rem + 2vw);
   max-width: 800px;
@@ -26,11 +30,6 @@ export const StyledContainer = styled.div`
   }
 
   h1 {
-    margin-bottom: 2rem;
-    font-size: calc(1.5rem + 1vw);
-  }
-
-  h4 {
-    text-transform: uppercase;
+    margin: 0;
   }
 `;

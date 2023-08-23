@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const roomSlice = createSlice({
   name: "room",
   initialState: {
-    name: "",
+    roomName: "",
     dates: "",
     board: "",
     price: "",

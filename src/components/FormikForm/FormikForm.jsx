@@ -14,7 +14,7 @@ export const FormikForm = ({ room }) => {
 
   const handleSubmit = (values) => {
     dispatch(setForm(values));
-    navigate("/");
+    navigate("/reservation");
   };
   return (
     <Formik
