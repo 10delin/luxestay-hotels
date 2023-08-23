@@ -1,23 +1,23 @@
-import { useNavigate } from "react-router-dom";
-
 import { InputDate } from "../../components/InputDate/InputDate";
 import { Room } from "../../components/Room/Room";
 import { useGetHotelQuery } from "../../redux/features/hotelsApi";
+import { useNavigateTo } from "../../hooks/useNavigateTo";
 
 import { StyledContainer, StyledButton, StyledRooms } from "./HomeStyles";
-import { useCallback } from "react";
+import { Spinner } from "../../components/Spinner/Spinner";
 
 export const Home = () => {
   const { data } = useGetHotelQuery();
-  const navigate = useNavigate();
+  const navigateTo = useNavigateTo();
 
-  const handleGoToBookings = useCallback(() => {
-    navigate("/bookings");
-  }, [navigate]);
+  if (!data) return <Spinner />;
 
   return (
     <StyledContainer>
-      <StyledButton onClick={handleGoToBookings} data-cy="goToBookings-button">
+      <StyledButton
+        onClick={() => navigateTo("/bookings")}
+        data-cy="goToBookings-button"
+      >
         Reservas
       </StyledButton>
       <InputDate />

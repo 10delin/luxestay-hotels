@@ -1,24 +1,20 @@
-import { useCallback, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 import { useSelector } from "react-redux";
 import { FormikForm } from "../../components/FormikForm/FormikForm";
 import { Room } from "../../components/Room/Room";
+import { useNavigateTo } from "../../hooks/useNavigateTo";
 
 import { StyledContainer } from "./FormStyles";
 
 export const Form = () => {
   const room = useSelector((state) => state.actualRoom);
-  const navigate = useNavigate();
-
-  const navigateToHome = useCallback(() => {
-    navigate("/");
-  }, [navigate]);
+  const navigateTo = useNavigateTo();
 
   useEffect(() => {
     window.scrollTo(0, 0);
     if (!room.roomName) {
-      navigateToHome();
+      navigateTo("/");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

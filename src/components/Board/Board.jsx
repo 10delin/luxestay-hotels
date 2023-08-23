@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setRoom } from "../../redux/reducers/roomSlice";
+import { useNavigateTo } from "../../hooks/useNavigateTo";
 
 import {
   StyledContainer,
@@ -11,15 +11,10 @@ import {
   StyledPrice,
   StyledButton,
 } from "./BoardStyles";
-import { useCallback } from "react";
 
 export const Board = ({ board, roomName }) => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  const navigateToForm = useCallback(() => {
-    navigate("/form");
-  }, [navigate]);
+  const navigateTo = useNavigateTo();
 
   const handleState = () => {
     dispatch(
@@ -29,7 +24,7 @@ export const Board = ({ board, roomName }) => {
         price: board.price,
       })
     );
-    navigateToForm();
+    navigateTo("/form");
   };
 
   return (
