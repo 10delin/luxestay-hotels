@@ -5,14 +5,15 @@ import { Room } from "../../components/Room/Room";
 import { useGetHotelQuery } from "../../redux/features/hotelsApi";
 
 import { StyledContainer, StyledButton, StyledRooms } from "./HomeStyles";
+import { useCallback } from "react";
 
 export const Home = () => {
   const { data } = useGetHotelQuery();
   const navigate = useNavigate();
 
-  const handleGoToBookings = () => {
+  const handleGoToBookings = useCallback(() => {
     navigate("/bookings");
-  };
+  }, [navigate]);
 
   return (
     <StyledContainer>

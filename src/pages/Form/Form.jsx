@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { useSelector } from "react-redux";
@@ -11,10 +11,14 @@ export const Form = () => {
   const room = useSelector((state) => state.actualRoom);
   const navigate = useNavigate();
 
+  const navigateToHome = useCallback(() => {
+    navigate("/");
+  }, [navigate]);
+
   useEffect(() => {
     window.scrollTo(0, 0);
     if (!room.roomName) {
-      navigate("/");
+      navigateToHome();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

@@ -4,15 +4,20 @@ import { getLocalStorageItem } from "../../utils/localStorageData";
 import { Booking } from "../../components/Booking/Booking";
 
 import { StyledContainer } from "./BookingsStyles";
+import { useCallback } from "react";
 
 export const Bookings = () => {
   const navigate = useNavigate();
   const localRoom = getLocalStorageItem("bookings");
 
+  const navigateToHome = useCallback(() => {
+    navigate("/");
+  }, [navigate]);
+
   return (
     <StyledContainer>
       <h1>Reservas</h1>
-      <button onClick={() => navigate("/")} data-cy="goToHome-button">
+      <button onClick={navigateToHome} data-cy="goToHome-button">
         Volver al Inicio
       </button>
 

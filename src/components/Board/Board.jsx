@@ -11,10 +11,15 @@ import {
   StyledPrice,
   StyledButton,
 } from "./BoardStyles";
+import { useCallback } from "react";
 
 export const Board = ({ board, roomName }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const navigateToForm = useCallback(() => {
+    navigate("/form");
+  }, [navigate]);
 
   const handleState = () => {
     dispatch(
@@ -24,7 +29,7 @@ export const Board = ({ board, roomName }) => {
         price: board.price,
       })
     );
-    navigate("/form");
+    navigateToForm();
   };
 
   return (
