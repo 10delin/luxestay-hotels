@@ -10,12 +10,13 @@ export const Home = () => {
   const { data } = useGetHotelQuery();
   const navigate = useNavigate();
 
+  const handleGoToBookings = () => {
+    navigate("/bookings");
+  };
+
   return (
     <StyledContainer>
-      <StyledButton
-        onClick={() => navigate("/bookings")}
-        data-cy="goToBookings-button"
-      >
+      <StyledButton onClick={handleGoToBookings} data-cy="goToBookings-button">
         Reservas
       </StyledButton>
       <InputDate />
