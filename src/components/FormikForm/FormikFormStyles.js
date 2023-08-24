@@ -7,13 +7,13 @@ export const StyledFormikForm = styled(Form)`
   flex-direction: column;
   align-items: end;
   justify-content: center;
-  gap: 1rem;
+  gap: 16px;
 
   button {
     border: none;
-    padding: 1rem 0.5rem;
     width: 100%;
-    font-size: 1rem;
+    padding: 16px 8px;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
   }
@@ -24,8 +24,8 @@ export const StyledTotal = styled.div`
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  gap: 0.5rem;
   width: 100%;
+  gap: 8px;
   margin: 20px 0;
 
   p {
@@ -35,5 +35,5 @@ export const StyledTotal = styled.div`
 `;
 
 export const StyledPrice = styled.p`
-  font-size: 2rem;
+  font-size: 32px;
 `;

@@ -25,10 +25,10 @@ export const StyledMain = styled.div`
   flex-direction: column;
   align-items: center;
   justify-items: left;
-  padding: 70px 0;
   width: 100%;
   height: 100%;
   margin: 0 auto;
+  padding: 70px 0;
   border-bottom: 2px solid #ebeaea;
 
   @media (max-width: 768px) {
@@ -74,10 +74,10 @@ export const StyledPrice = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 5px 30px;
-  gap: 5px;
   width: -webkit-fill-available;
   height: 100%;
+  gap: 5px;
+  padding: 5px 30px;
   margin: 0 auto;
   border-bottom: 2px solid #ebeaea;
 `;
@@ -93,10 +93,10 @@ export const StyledUser = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 15px;
-  gap: 5px;
   width: -webkit-fill-available;
   height: 100%;
+  gap: 5px;
+  padding: 15px;
   margin: 0 auto;
 
   p {

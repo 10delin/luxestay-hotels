@@ -23,7 +23,7 @@ export const Form = () => {
     <StyledContainer>
       <h1>Resumen de tu reserva</h1>
       <Room room={room} selected />
-      <h4>Tus datos</h4>
+      <h3>Tus datos</h3>
       <FormikForm room={room} />
     </StyledContainer>
   );

@@ -5,10 +5,10 @@ export const StyledContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 2rem;
   align-items: center;
   width: 100%;
   height: 100%;
+  gap: 30px;
   &:not(:last-child) {
     border-bottom: 1px solid #c5c5c5;
   }
@@ -26,33 +26,33 @@ export const StyledContent = styled.div`
 `;
 
 export const StyledName = styled.p`
-  font-size: 1rem;
+  min-width: 175px;
+  font-size: 16px;
   font-weight: 600;
-  min-width: 11rem;
   color: #000;
   text-transform: capitalize;
 
   @media (max-width: 768px) {
-    min-width: 8rem;
-    font-size: 0.8rem;
+    min-width: 130px;
+    font-size: 14px;
   }
 `;
 
 export const StyledPrice = styled.p`
-  font-size: 1rem;
+  text-align: center;
+  font-size: 16px;
   font-weight: 600;
   color: #019592;
-  text-align: center;
 
   @media (max-width: 768px) {
-    font-size: 0.8rem;
+    font-size: 14px;
   }
 `;
 
 export const StyledButton = styled.button`
-  font-size: 1rem;
+  font-size: 16px;
 
   @media (max-width: 768px) {
-    font-size: 0.8rem;
+    font-size: 14px;
   }
 `;

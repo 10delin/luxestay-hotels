@@ -4,8 +4,8 @@ export const StyledContent = styled.div`
   position: relative;
   display: flex;
   justify-content: space-between;
-  width: 100%;
   align-items: center;
+  width: 100%;
   padding: 1rem 0;
 `;
 
@@ -25,9 +25,9 @@ export const StyledPrice = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-right: 2rem;
   font-size: 1.5rem;
   font-weight: 700;
-  padding-right: 2rem;
 `;
 
 export const StyledDates = styled.p`

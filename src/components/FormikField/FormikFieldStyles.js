@@ -3,28 +3,28 @@ import styled from "styled-components";
 export const StyledFormikField = styled.div`
   position: relative;
   display: flex;
-  padding: 15px 0;
   width: 100%;
-  background: #ededed;
+  padding: 15px 0;
   border-bottom: 1px solid black;
+  background: #ededed;
 
   ${({ $name }) =>
     $name === "terms" &&
     `
-    background: #ffffff;
+    gap: 8px;
     border-bottom: none;
+    background: #ffffff;
     color: #212121;
-    gap: 0.5rem;
   `}
 
   label {
     position: absolute;
+    display: block;
     top: 5px;
     left: 15px;
-    display: block;
-    transition: 0.2s ease all;
-    font-size: 1rem;
+    font-size: 16px;
     color: #9b9b9b;
+    transition: 0.2s ease all;
 
     ${({ $name }) =>
       $name === "terms" &&
@@ -37,8 +37,7 @@ export const StyledFormikField = styled.div`
       top:0;
       left:0;
       cursor: pointer;
-
-    color: #212121;
+      color: #212121;
   `}
   }
 
@@ -46,12 +45,12 @@ export const StyledFormikField = styled.div`
     position: relative;
     width: 95%;
     padding-left: 15px;
-    font-family: inherit;
+    padding-top: 15px;
     border: 0;
     outline: 0;
     font-size: 16px;
     font-weight: 600;
-    padding-top: 15px;
+    font-family: inherit;
     background: #ededed;
     color: #212121;
 
@@ -61,9 +60,7 @@ export const StyledFormikField = styled.div`
       position: flex;
       width: initial;
       cursor: pointer;
-
-      
-    color: #212121;
+      color: #212121;
   `}
   }
 
@@ -71,12 +68,12 @@ export const StyledFormikField = styled.div`
     position: relative;
     width: 98%;
     padding-left: 15px;
-    font-family: inherit;
+    padding-top: 15px;
     border: 0;
     outline: 0;
     font-size: 16px;
     font-weight: 600;
-    padding-top: 15px;
+    font-family: inherit;
     background: #ededed;
     color: #212121;
     cursor: pointer;
@@ -86,9 +83,7 @@ export const StyledFormikField = styled.div`
       `
       position: flex;
       width: initial;
-
-      
-    color: #212121;
+      color: #212121;
   `}
   }
 `;

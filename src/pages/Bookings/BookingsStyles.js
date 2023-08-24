@@ -5,13 +5,10 @@ export const StyledContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
-  padding: 10px 20px;
-  margin: 10px;
   max-width: 800px;
+  gap: 40px;
   margin: 0 auto;
   padding: calc(5rem + 2vw);
-  max-width: 800px;
 
   @media (max-width: 768px) {
     padding: calc(2rem + 2vw);

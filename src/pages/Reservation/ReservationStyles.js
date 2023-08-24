@@ -5,9 +5,9 @@ export const StyledContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  max-width: 800px;
   margin: 0 auto;
   padding: calc(5rem + 2vw);
-  max-width: 800px;
 
   @media (max-width: 768px) {
     padding: calc(2rem + 2vw);
@@ -30,7 +30,7 @@ export const StyledContainer = styled.div`
     font-size: calc(1.5rem + 1vw);
   }
 
-  h4 {
+  h3 {
     text-transform: uppercase;
   }
 `;

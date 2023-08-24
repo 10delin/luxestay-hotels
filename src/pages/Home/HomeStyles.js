@@ -4,9 +4,9 @@ export const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 800px;
   padding: calc(5rem + 2vw);
   margin: 0 auto;
-  max-width: 800px;
 
   @media (max-width: 768px) {
     padding: calc(2rem + 2vw);

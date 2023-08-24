@@ -4,10 +4,10 @@ export const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: left;
-  padding: calc(5rem + 2vw);
-  height: 120vh;
-  margin: 0 auto;
   max-width: 800px;
+  height: 120vh;
+  padding: calc(5rem + 2vw);
+  margin: 0 auto;
 
   @media (max-width: 768px) {
     padding: calc(2rem + 2vw);
@@ -22,7 +22,8 @@ export const StyledContainer = styled.div`
     font-size: calc(1.5rem + 1vw);
   }
 
-  h4 {
+  h3 {
+    font-size: 15px;
     text-transform: uppercase;
   }
 `;
