@@ -25,11 +25,11 @@ Visita la [página web desplegada en Vercel](https://luxestay-hotels.vercel.app/
 ### Reservas Locales y Visualización de Reservas
 
 Se ha mejorado la experiencia de usuario al agregar una nueva funcionalidad que permite a los usuarios guardar sus reservas de habitaciones localmente. Ahora, cuando un usuario completa el formulario de reserva, la reserva se guarda en el almacenamiento local del navegador, lo que garantiza que la información de la reserva esté disponible incluso después de cerrar la página.
-Además, hemos introducido una página adicional llamada "Bookings", donde los usuarios pueden ver un listado de sus reservas anteriores. Esto ofrece una visión rápida y conveniente de las habitaciones reservadas en el pasado, lo que puede ser útil para referencia o seguimiento.
+Además, se ha introducido una página adicional llamada "Bookings", donde los usuarios pueden ver un listado de sus reservas anteriores. Esto ofrece una visión rápida y conveniente de las habitaciones reservadas en el pasado, lo que puede ser útil para referencia o seguimiento.
 
 ### Validación Avanzada de Formularios
 
-Para mejorar la calidad de las reservas y asegurarnos de que los datos ingresados sean precisos, se ha implementado una validación exhaustiva en el formulario de reserva. Cada campo del formulario, incluyendo nombre, apellidos, email y país, es ahora validado en tiempo real. Si un usuario intenta enviar el formulario con datos incorrectos o faltantes, se mostrarán mensajes de error específicos junto a los campos relevantes. Esto ayuda a evitar errores comunes y brinda una experiencia más fluida y amigable al usuario.
+Para mejorar la calidad de las reservas y asegurar que los datos ingresados sean precisos, se ha implementado una validación exhaustiva en el formulario de reserva. Cada campo del formulario, incluyendo nombre, apellidos, email y país, es ahora validado en tiempo real. Si un usuario intenta enviar el formulario con datos incorrectos o faltantes, se mostrarán mensajes de error específicos junto a los campos relevantes. Esto ayuda a evitar errores comunes y brinda una experiencia más fluida y amigable al usuario.
 
 ## Cómo Empezar
 
