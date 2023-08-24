@@ -7,10 +7,10 @@ import { StyledContainer, StyledButton, StyledRooms } from "./HomeStyles";
 import { Spinner } from "../../components/Spinner/Spinner";
 
 export const Home = () => {
-  const { data } = useGetHotelQuery();
+  const { data,isLoading } = useGetHotelQuery();
   const navigateTo = useNavigateTo();
 
-  if (!data) return <Spinner />;
+  if (isLoading) return <Spinner />;
 
   return (
     <StyledContainer>

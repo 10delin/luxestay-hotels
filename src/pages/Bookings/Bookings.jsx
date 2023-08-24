@@ -1,8 +1,8 @@
 import { getLocalStorageItem } from "../../utils/localStorageData";
 import { Booking } from "../../components/Booking/Booking";
+import { useNavigateTo } from "../../hooks/useNavigateTo";
 
 import { StyledContainer } from "./BookingsStyles";
-import { useNavigateTo } from "../../hooks/useNavigateTo";
 
 export const Bookings = () => {
   const localRoom = getLocalStorageItem("bookings");

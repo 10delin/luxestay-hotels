@@ -36,6 +36,7 @@ export const StyledFormikField = styled.div`
       justify-content: flex-start;
       top:0;
       left:0;
+      cursor: pointer;
 
     color: #212121;
   `}
@@ -59,6 +60,7 @@ export const StyledFormikField = styled.div`
       `
       position: flex;
       width: initial;
+      cursor: pointer;
 
       
     color: #212121;
@@ -67,7 +69,7 @@ export const StyledFormikField = styled.div`
 
   select {
     position: relative;
-    width: 95%;
+    width: 98%;
     padding-left: 15px;
     font-family: inherit;
     border: 0;

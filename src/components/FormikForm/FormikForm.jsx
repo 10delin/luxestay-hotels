@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 
 import { Formik } from "formik";
+import { FormikFields } from "../FormikFields/FormikFields";
 import { ErrorsForm } from "../ErrorsForm/ErrorsForm";
-import { FormikField } from "../FormikField/FormikField";
 import { useDispatch } from "react-redux";
 import { setForm } from "../../redux/reducers/formSlice";
 import { validateReservationForm } from "../../utils/validation";
@@ -33,37 +33,7 @@ export const FormikForm = ({ room }) => {
     >
       {({ errors }) => (
         <StyledFormikForm>
-          <FormikField
-            name="name"
-            type="text"
-            label="Nombre"
-            dataCy="name-input"
-          />
-          <FormikField
-            name="surname"
-            type="text"
-            label="Apellidos"
-            dataCy="surname-input"
-          />
-          <FormikField
-            name="email"
-            type="text"
-            label="Email"
-            dataCy="email-input"
-          />
-          <FormikField
-            name="country"
-            type="select"
-            label="Pais"
-            dataCy="country-input"
-          />
-          <FormikField
-            name="terms"
-            type="checkbox"
-            label="Acepto terminos y condiciones"
-            dataCy="terms-input"
-          />
-
+          <FormikFields />
           <StyledTotal>
             <p>Total</p>
             <StyledPrice>{`$${room.price}`}</StyledPrice>
