@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 import { setRoom } from "../../redux/reducers/roomSlice";
 import { useNavigateTo } from "../../hooks/useNavigateTo";
+import { useTranslation } from "react-i18next";
 
 import {
   StyledContainer,
@@ -15,6 +16,7 @@ import {
 export const Board = ({ board, roomName }) => {
   const dispatch = useDispatch();
   const navigateTo = useNavigateTo();
+  const { t } = useTranslation();
 
   const handleState = () => {
     dispatch(
@@ -33,7 +35,7 @@ export const Board = ({ board, roomName }) => {
         <StyledName>{board.name}</StyledName>
         <StyledPrice>{`$${board.price}`}</StyledPrice>
         <StyledButton onClick={handleState} data-cy="goToForm-button">
-          Reservar
+          {t("home.bookButton")}
         </StyledButton>
       </StyledContent>
     </StyledContainer>

@@ -9,10 +9,12 @@ import { validateReservationForm } from "../../utils/validation";
 import { useNavigateTo } from "../../hooks/useNavigateTo";
 
 import { StyledFormikForm, StyledPrice, StyledTotal } from "./FormikFormStyles";
+import { useTranslation } from "react-i18next";
 
 export const FormikForm = ({ room }) => {
   const dispatch = useDispatch();
   const navigateTo = useNavigateTo();
+  const { t } = useTranslation();
 
   const handleSubmit = (values) => {
     dispatch(setForm(values));
@@ -35,12 +37,12 @@ export const FormikForm = ({ room }) => {
         <StyledFormikForm>
           <FormikFields />
           <StyledTotal>
-            <p>Total</p>
+            <p>{t("form.total")}</p>
             <StyledPrice>{`$${room.price}`}</StyledPrice>
           </StyledTotal>
           <ErrorsForm errors={errors} />
           <button type="submit" data-cy="goToReservation-button">
-            Reservar
+            {t("form.goToReservationButton")}
           </button>
         </StyledFormikForm>
       )}

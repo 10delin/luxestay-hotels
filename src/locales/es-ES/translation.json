@@ -1,0 +1,28 @@
+{
+  "home": {
+    "goToBookingsButton": "Reservas",
+    "bookButton": "Reservar"
+  },
+  "bookings": {
+    "title": "Reservas",
+    "goBackHome": "Volver a inicio",
+    "bookTitle": "Reserva",
+    "noBooks": "No hay reservas"
+  },
+  "form": {
+    "title": "Resumen de tu reserva",
+    "titleData": "Tus datos",
+    "name": "Nombre",
+    "surname": "Apellidos",
+    "email": "Email",
+    "country": "Pais",
+    "terms": "Acepto terminos y condiciones",
+    "total": "Total",
+    "goToReservationButton": "Reservar"
+  },
+  "reservation": {
+    "title": "Redirigiendo a la página principal en",
+    "titleSec": "segundos...",
+    "bookTitle": "Reserva"
+  }
+}
