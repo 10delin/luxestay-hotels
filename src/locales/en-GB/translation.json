@@ -1,0 +1,28 @@
+{
+  "home": {
+    "goToBookingsButton": "Go to Bookings",
+    "bookButton": "Book"
+  },
+  "bookings": {
+    "title": "Bookings",
+    "goBackHome": "Go back to home",
+    "bookTitle": "Booking",
+    "noBooks": "No bookings"
+  },
+  "form": {
+    "title": "Your Booking Summary",
+    "titleData": "Your Details",
+    "name": "Name",
+    "surname": "Surname",
+    "email": "Email",
+    "country": "Country",
+    "terms": "I accept terms and conditions",
+    "total": "Total",
+    "goToReservationButton": "Book"
+  },
+  "reservation": {
+    "title": "Redirecting to the main page in",
+    "titleSec": "seconds...",
+    "bookTitle": "Booking"
+  }
+}
