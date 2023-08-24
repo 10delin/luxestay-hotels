@@ -24,7 +24,6 @@ export const RoomSelected = ({ room }) => {
 
 RoomSelected.propTypes = {
   room: PropTypes.shape({
-    name: PropTypes.string.isRequired,
     board: PropTypes.string.isRequired,
     dates: PropTypes.string,
     price: PropTypes.number,

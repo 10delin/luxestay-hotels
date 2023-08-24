@@ -53,6 +53,6 @@ Booking.propTypes = {
   room: PropTypes.object.isRequired,
   form: PropTypes.object.isRequired,
   aleatoryNumber: PropTypes.number.isRequired,
-  counter: PropTypes.number.isRequired,
+  counter: PropTypes.number,
   bookings: PropTypes.bool,
 };

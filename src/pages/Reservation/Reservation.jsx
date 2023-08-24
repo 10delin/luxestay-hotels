@@ -10,7 +10,8 @@ import { StyledContainer } from "./ReservationStyles";
 import { useReservationUpdate } from "../../hooks/useReservationUpdate";
 
 export const Reservation = () => {
-  const { actualRoom: room, actualForm: form } = useSelector((state) => state);
+  const actualRoom = useSelector((state) => state.actualRoom);
+  const actualForm = useSelector((state) => state.actualForm);
 
   const [aleatoryNumber] = useState(Math.floor(Math.random() * 1000000));
   const [counter, setCounter] = useState(TOTAL_SECONDS);
@@ -20,8 +21,8 @@ export const Reservation = () => {
 
   const updateReservation = useReservationUpdate(
     aleatoryNumber,
-    room,
-    form,
+    actualRoom,
+    actualForm,
     localRoom
   );
 
@@ -42,13 +43,13 @@ export const Reservation = () => {
       clearTimeout(timeout);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [room, form]);
+  }, [actualRoom, actualForm]);
 
   return (
     <StyledContainer>
       <Booking
-        room={room}
-        form={form}
+        room={actualRoom}
+        form={actualForm}
         aleatoryNumber={aleatoryNumber}
         counter={counter}
       />
