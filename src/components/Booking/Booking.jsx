@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-import checkImage from "../../assets/images/check.png";
+import checkImage from "../../assets/images/check.webp";
 
 import {
   StyledContainer,
