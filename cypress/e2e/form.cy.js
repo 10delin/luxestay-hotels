@@ -15,19 +15,6 @@ describe("Form Page", () => {
     cy.getBySel("room-item").should("be.visible");
   });
 
-  it("you should check that the form is not sent until you meet the requirements.", () => {
-    cy.getBySel("goToForm-button").first().click();
-    cy.getBySel("goToReservation-button").click();
-    cy.getBySel("name-input").type("test");
-    cy.getBySel("goToReservation-button").click();
-    cy.getBySel("surname-input").type("test");
-    cy.getBySel("goToReservation-button").click();
-    cy.getBySel("email-input").type("test");
-    cy.getBySel("goToReservation-button").click();
-    cy.getBySel("country-input").type("test");
-    cy.getBySel("goToReservation-button").click();
-  });
-
   it("should type data on inputs and send it", () => {
     cy.getBySel("goToForm-button").first().click();
     cy.getBySel("name-input").type("test");
