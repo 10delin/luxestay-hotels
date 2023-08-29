@@ -32,8 +32,9 @@ export const FormikForm = ({ room }) => {
       }}
       validate={validateReservationForm}
       onSubmit={handleSubmit}
+      validateOnMount
     >
-      {({ errors }) => (
+      {({ errors, isValid }) => (
         <StyledFormikForm>
           <FormikFields />
           <StyledTotal>
@@ -41,7 +42,11 @@ export const FormikForm = ({ room }) => {
             <StyledPrice>{`$${room.price}`}</StyledPrice>
           </StyledTotal>
           <ErrorsForm errors={errors} />
-          <button type="submit" data-cy="goToReservation-button">
+          <button
+            disabled={!isValid}
+            type="submit"
+            data-cy="goToReservation-button"
+          >
             {t("form.goToReservationButton")}
           </button>
         </StyledFormikForm>
