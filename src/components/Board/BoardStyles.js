@@ -42,7 +42,7 @@ export const StyledPrice = styled.p`
   text-align: center;
   font-size: 16px;
   font-weight: 600;
-  color: #019592;
+  color: #007a78;
 
   @media (max-width: 768px) {
     font-size: 14px;

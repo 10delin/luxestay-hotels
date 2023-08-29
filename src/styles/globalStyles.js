@@ -43,18 +43,19 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 15px;
     font-weight: 400;
     font-family: inherit;
-    background-color: #019592;
+    background-color: #007A78;
     color: #ffffff;
     cursor: pointer;
     text-transform: uppercase;
     transition: border-color 0.25s;
   }
   button:hover {
-    background-color: #006260;
+    background-color: #005260;
   }
-  button:focus,
-  button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
+
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
   }
 
   @media (prefers-color-scheme: light) {
